@@ -52,6 +52,13 @@ export default function App() {
           </Text>
         </TouchableOpacity>
       </View>
+      {Platform.OS !== 'android' ? (
+        <Text style={styles.title}>
+          Your lucky number is {Math.floor(Math.random() * 10)}
+        </Text>
+      ) : (
+        <View></View>
+      )}
     </View>
   );
 }
