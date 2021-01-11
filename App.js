@@ -5,6 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   ToastAndroid,
+  Platform,
 } from 'react-native';
 
 export default function App() {
@@ -36,12 +37,14 @@ export default function App() {
             setBackgroundColor(
               `#FF${Math.floor(Math.random() * 1000)}`,
             );
-            ToastAndroid.show(
-              `${Math.floor(
-                Math.random() * 10,
-              )} is your lucky number!`,
-              ToastAndroid.SHORT,
-            );
+            if (Platform.OS === 'android') {
+              ToastAndroid.show(
+                `${Math.floor(
+                  Math.random() * 10,
+                )} is your lucky number!`,
+                ToastAndroid.SHORT,
+              );
+            }
           }}
         >
           <Text style={[styles.title, { color: textColor }]}>
