@@ -2,6 +2,12 @@
 
 Really there is nothing to it 😅 if you want to see your lucky number go look for it!
 
+# Environments
+
+- iOS
+- Android
+- Windows
+
 # Contributions
 
 - Pull requests are more than welcome as long as they remain appropriate.
